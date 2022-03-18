@@ -9,13 +9,14 @@
 /* Begin PBXBuildFile section */
 		F864FD2727E4EFA30015D4AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F864FD2627E4EFA30015D4AA /* AppDelegate.swift */; };
 		F864FD2927E4EFA30015D4AA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F864FD2827E4EFA30015D4AA /* SceneDelegate.swift */; };
-		F864FD2B27E4EFA30015D4AA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F864FD2A27E4EFA30015D4AA /* ViewController.swift */; };
+		F864FD2B27E4EFA30015D4AA /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F864FD2A27E4EFA30015D4AA /* MainViewController.swift */; };
 		F864FD2E27E4EFA30015D4AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F864FD2C27E4EFA30015D4AA /* Main.storyboard */; };
 		F864FD3027E4EFA40015D4AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F864FD2F27E4EFA40015D4AA /* Assets.xcassets */; };
 		F864FD3327E4EFA40015D4AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F864FD3127E4EFA40015D4AA /* LaunchScreen.storyboard */; };
 		F864FD3E27E4EFA40015D4AA /* PomodoroTimer_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F864FD3D27E4EFA40015D4AA /* PomodoroTimer_iOSTests.swift */; };
 		F864FD4827E4EFA40015D4AA /* PomodoroTimer_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F864FD4727E4EFA40015D4AA /* PomodoroTimer_iOSUITests.swift */; };
 		F864FD4A27E4EFA40015D4AA /* PomodoroTimer_iOSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F864FD4927E4EFA40015D4AA /* PomodoroTimer_iOSUITestsLaunchTests.swift */; };
+		F864FD5A27E514EC0015D4AA /* LaunchScreenViewControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F864FD5927E514EC0015D4AA /* LaunchScreenViewControllers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +40,7 @@
 		F864FD2327E4EFA30015D4AA /* PomodoroTimer-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PomodoroTimer-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F864FD2627E4EFA30015D4AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F864FD2827E4EFA30015D4AA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F864FD2A27E4EFA30015D4AA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F864FD2A27E4EFA30015D4AA /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		F864FD2D27E4EFA30015D4AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F864FD2F27E4EFA40015D4AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F864FD3227E4EFA40015D4AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +50,7 @@
 		F864FD4327E4EFA40015D4AA /* PomodoroTimer-iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "PomodoroTimer-iOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F864FD4727E4EFA40015D4AA /* PomodoroTimer_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PomodoroTimer_iOSUITests.swift; sourceTree = "<group>"; };
 		F864FD4927E4EFA40015D4AA /* PomodoroTimer_iOSUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PomodoroTimer_iOSUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F864FD5927E514EC0015D4AA /* LaunchScreenViewControllers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewControllers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,12 +101,10 @@
 		F864FD2527E4EFA30015D4AA /* PomodoroTimer-iOS */ = {
 			isa = PBXGroup;
 			children = (
-				F864FD2627E4EFA30015D4AA /* AppDelegate.swift */,
-				F864FD2827E4EFA30015D4AA /* SceneDelegate.swift */,
-				F864FD2A27E4EFA30015D4AA /* ViewController.swift */,
-				F864FD2C27E4EFA30015D4AA /* Main.storyboard */,
+				F864FD5727E50EE50015D4AA /* AppDelegates */,
+				F864FD5827E50F090015D4AA /* Views */,
+				F864FD5627E50ECF0015D4AA /* ViewControllers */,
 				F864FD2F27E4EFA40015D4AA /* Assets.xcassets */,
-				F864FD3127E4EFA40015D4AA /* LaunchScreen.storyboard */,
 				F864FD3427E4EFA40015D4AA /* Info.plist */,
 			);
 			path = "PomodoroTimer-iOS";
@@ -125,6 +125,33 @@
 				F864FD4927E4EFA40015D4AA /* PomodoroTimer_iOSUITestsLaunchTests.swift */,
 			);
 			path = "PomodoroTimer-iOSUITests";
+			sourceTree = "<group>";
+		};
+		F864FD5627E50ECF0015D4AA /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F864FD2A27E4EFA30015D4AA /* MainViewController.swift */,
+				F864FD5927E514EC0015D4AA /* LaunchScreenViewControllers.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		F864FD5727E50EE50015D4AA /* AppDelegates */ = {
+			isa = PBXGroup;
+			children = (
+				F864FD2627E4EFA30015D4AA /* AppDelegate.swift */,
+				F864FD2827E4EFA30015D4AA /* SceneDelegate.swift */,
+			);
+			path = AppDelegates;
+			sourceTree = "<group>";
+		};
+		F864FD5827E50F090015D4AA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F864FD3127E4EFA40015D4AA /* LaunchScreen.storyboard */,
+				F864FD2C27E4EFA30015D4AA /* Main.storyboard */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,9 +285,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F864FD2B27E4EFA30015D4AA /* ViewController.swift in Sources */,
+				F864FD2B27E4EFA30015D4AA /* MainViewController.swift in Sources */,
 				F864FD2727E4EFA30015D4AA /* AppDelegate.swift in Sources */,
 				F864FD2927E4EFA30015D4AA /* SceneDelegate.swift in Sources */,
+				F864FD5A27E514EC0015D4AA /* LaunchScreenViewControllers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -445,6 +473,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -473,6 +502,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

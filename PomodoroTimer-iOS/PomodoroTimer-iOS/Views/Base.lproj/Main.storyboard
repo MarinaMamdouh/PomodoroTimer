@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Xly-I8-Kzu">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Launch Screen View Controllers-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="LaunchScreenViewControllers" customModule="PomodoroTimer_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KYT-6d-b4q">
+                                <rect key="frame" x="186" y="401" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="35" y="50"/>
+        </scene>
+        <!--main-->
+        <scene sceneID="BFu-Ps-UUP">
+            <objects>
+                <viewController storyboardIdentifier="main" title="main" id="Xly-I8-Kzu" customClass="MainViewController" customModule="PomodoroTimer_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WZN-Yo-IX5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="arE-dq-4Wa" userLabel="TimerView">
+                                <rect key="frame" x="31" y="227.5" width="352" height="351.5"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tomato" translatesAutoresizingMaskIntoConstraints="NO" id="YjW-sz-s3e">
+                                        <rect key="frame" x="0.0" y="0.0" width="352" height="351.5"/>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="z2D-iz-bgb" userLabel="Timer">
+                                        <rect key="frame" x="78.5" y="182" width="195" height="57.5"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="25" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="w0N-F8-G7e" userLabel="minutes">
+                                                <rect key="frame" x="0.0" y="0.0" width="77" height="57.5"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="textColor" systemColor="systemBackgroundColor"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="40"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad" textContentType="date-time"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text=":" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6PA-4F-qWG" userLabel=":">
+                                                <rect key="frame" x="77" y="0.0" width="38" height="57.5"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="textColor" systemColor="systemBackgroundColor"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="40"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="00" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KT4-A8-XtF" userLabel="seconds">
+                                                <rect key="frame" x="115" y="0.0" width="80" height="57.5"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="textColor" systemColor="systemBackgroundColor"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="40"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="YjW-sz-s3e" firstAttribute="centerY" secondItem="arE-dq-4Wa" secondAttribute="centerY" id="CwQ-Wf-T4W"/>
+                                    <constraint firstItem="YjW-sz-s3e" firstAttribute="width" secondItem="arE-dq-4Wa" secondAttribute="width" id="GTv-hC-PKe"/>
+                                    <constraint firstAttribute="width" secondItem="arE-dq-4Wa" secondAttribute="height" multiplier="1:1" id="Kgk-hc-VmD"/>
+                                    <constraint firstItem="YjW-sz-s3e" firstAttribute="centerX" secondItem="arE-dq-4Wa" secondAttribute="centerX" id="LXT-nV-AEF"/>
+                                    <constraint firstItem="z2D-iz-bgb" firstAttribute="centerY" secondItem="arE-dq-4Wa" secondAttribute="centerY" multiplier="1.2" id="ZWE-Yd-Op3"/>
+                                    <constraint firstItem="YjW-sz-s3e" firstAttribute="height" secondItem="arE-dq-4Wa" secondAttribute="height" id="j7d-EB-wIa"/>
+                                    <constraint firstItem="z2D-iz-bgb" firstAttribute="centerX" secondItem="arE-dq-4Wa" secondAttribute="centerX" id="r5H-Jq-dTP"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xwY-Lo-Ov1" userLabel="StartBtn">
+                                <rect key="frame" x="103.5" y="614" width="207" height="50"/>
+                                <color key="tintColor" systemColor="systemRedColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Start">
+                                    <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="30"/>
+                                    <color key="baseForegroundColor" systemColor="systemRedColor"/>
+                                    <color key="baseBackgroundColor" systemColor="systemRedColor"/>
+                                </buttonConfiguration>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="CRp-vd-Zs1"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="xwY-Lo-Ov1" firstAttribute="top" secondItem="arE-dq-4Wa" secondAttribute="bottom" constant="35" id="7Cl-cV-lex"/>
+                            <constraint firstItem="arE-dq-4Wa" firstAttribute="width" secondItem="WZN-Yo-IX5" secondAttribute="width" multiplier="0.85" id="Cql-XF-2gC"/>
+                            <constraint firstItem="xwY-Lo-Ov1" firstAttribute="centerX" secondItem="WZN-Yo-IX5" secondAttribute="centerX" id="fMh-Ms-nfC"/>
+                            <constraint firstItem="arE-dq-4Wa" firstAttribute="centerX" secondItem="WZN-Yo-IX5" secondAttribute="centerX" id="gjC-14-iFr"/>
+                            <constraint firstItem="xwY-Lo-Ov1" firstAttribute="width" secondItem="WZN-Yo-IX5" secondAttribute="width" multiplier="0.5" id="pze-fO-ZTY"/>
+                            <constraint firstItem="arE-dq-4Wa" firstAttribute="centerY" secondItem="WZN-Yo-IX5" secondAttribute="centerY" multiplier="0.9" id="zkh-xi-PZG"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="YNu-JJ-IXM"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zj2-aP-QLx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="903" y="66"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Tomato" width="250" height="250"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
