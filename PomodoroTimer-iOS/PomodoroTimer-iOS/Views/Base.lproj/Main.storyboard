@@ -116,6 +116,7 @@
                         <outlet property="secondsTextField" destination="KT4-A8-XtF" id="kcs-Wn-KtR"/>
                         <outlet property="startBtn" destination="xwY-Lo-Ov1" id="bfJ-ig-2OG"/>
                         <outlet property="timeStackView" destination="z2D-iz-bgb" id="FqJ-va-Clh"/>
+                        <outlet property="timerMainView" destination="arE-dq-4Wa" id="4hn-vC-yfS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zj2-aP-QLx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

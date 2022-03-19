@@ -15,6 +15,7 @@ class MainViewController: UIViewController {
     
     @IBOutlet weak var timeStackView: UIStackView!
     
+    @IBOutlet weak var timerMainView: UIView!
     @IBOutlet weak var startBtn: UIButton!
     
     private var totalTimeInSeconds:Int!
@@ -31,6 +32,8 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        timerMainView.entryAnimation(withDuration: 0.6, delay: 0, yShift: 30)
+        startBtn.entryAnimation(withDuration: 0.6, delay: 0, yShift: 30)
         // Do any additional setup after loading the view.
     }
     
