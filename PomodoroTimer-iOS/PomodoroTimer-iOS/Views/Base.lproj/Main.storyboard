@@ -40,6 +40,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hola, You have finished pomodoro session!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lZx-vB-Fc4" userLabel="message">
+                                <rect key="frame" x="0.0" y="121" width="414" height="76.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="32"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="arE-dq-4Wa" userLabel="TimerView">
                                 <rect key="frame" x="31" y="227.5" width="352" height="351.5"/>
                                 <subviews>
@@ -116,14 +122,18 @@
                         <constraints>
                             <constraint firstItem="xwY-Lo-Ov1" firstAttribute="top" secondItem="arE-dq-4Wa" secondAttribute="bottom" constant="35" id="7Cl-cV-lex"/>
                             <constraint firstItem="arE-dq-4Wa" firstAttribute="width" secondItem="WZN-Yo-IX5" secondAttribute="width" multiplier="0.85" id="Cql-XF-2gC"/>
+                            <constraint firstItem="lZx-vB-Fc4" firstAttribute="width" secondItem="WZN-Yo-IX5" secondAttribute="width" id="c7w-8n-Tsd"/>
                             <constraint firstItem="xwY-Lo-Ov1" firstAttribute="centerX" secondItem="WZN-Yo-IX5" secondAttribute="centerX" id="fMh-Ms-nfC"/>
                             <constraint firstItem="arE-dq-4Wa" firstAttribute="centerX" secondItem="WZN-Yo-IX5" secondAttribute="centerX" id="gjC-14-iFr"/>
+                            <constraint firstItem="lZx-vB-Fc4" firstAttribute="bottom" secondItem="arE-dq-4Wa" secondAttribute="top" constant="-30" id="kk3-Rx-rJe"/>
+                            <constraint firstItem="lZx-vB-Fc4" firstAttribute="centerX" secondItem="WZN-Yo-IX5" secondAttribute="centerX" id="o2n-Sb-QSF"/>
                             <constraint firstItem="xwY-Lo-Ov1" firstAttribute="width" secondItem="WZN-Yo-IX5" secondAttribute="width" multiplier="0.5" id="pze-fO-ZTY"/>
                             <constraint firstItem="arE-dq-4Wa" firstAttribute="centerY" secondItem="WZN-Yo-IX5" secondAttribute="centerY" multiplier="0.9" id="zkh-xi-PZG"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="YNu-JJ-IXM"/>
                     <connections>
+                        <outlet property="messageLabel" destination="lZx-vB-Fc4" id="71a-jD-lI0"/>
                         <outlet property="minutesTextField" destination="w0N-F8-G7e" id="ZQ7-qy-LJ8"/>
                         <outlet property="secondsTextField" destination="KT4-A8-XtF" id="kcs-Wn-KtR"/>
                         <outlet property="startBtn" destination="xwY-Lo-Ov1" id="bfJ-ig-2OG"/>

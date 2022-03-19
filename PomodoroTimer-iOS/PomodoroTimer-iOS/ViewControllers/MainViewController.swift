@@ -16,6 +16,7 @@ class MainViewController: UIViewController {
     @IBOutlet weak var timeStackView: UIStackView!
     
     @IBOutlet weak var timerMainView: UIView!
+    @IBOutlet weak var messageLabel: UILabel!
     @IBOutlet weak var startBtn: UIButton!
     
     private var totalTimeInSeconds:Int!
@@ -30,10 +31,16 @@ class MainViewController: UIViewController {
     
     private var timer:Timer!
     
+    private var timerIsInProgress:Bool = false
+    
+    private var timerIsResumed:Bool = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.hideKeyboardWhenTappedAround()
         timerMainView.entryAnimation(withDuration: 0.6, delay: 0, yShift: 30)
         startBtn.entryAnimation(withDuration: 0.6, delay: 0, yShift: 30)
+        messageLabel.isHidden = true
         minutesTextField.delegate =  self
         secondsTextField.delegate =  self
         // Do any additional setup after loading the view.
@@ -41,9 +48,13 @@ class MainViewController: UIViewController {
     
     
     @IBAction func startBtnClicked(_ sender: Any) {
-        
-        startTimer()
-        
+        if(timerIsInProgress){
+            stopTimer()
+        }
+        else{
+            startTimer()
+            messageLabel.isHidden = true
+        }
     }
     
     func startTimer(){
@@ -57,9 +68,19 @@ class MainViewController: UIViewController {
             secondsTextField.isEnabled =  false
             totalTimeInSeconds = (minutes * 60) + seconds
             timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(startCountingDown), userInfo: nil, repeats: true)
+            startBtn.setTitle("Stop", for: .normal)
+            timerIsInProgress = true
             
         }
         
+    }
+    
+    func stopTimer(){
+        timer.invalidate()
+        timerIsInProgress =  false
+        startBtn.setTitle("Resume", for: .normal)
+        minutesTextField.isEnabled =  true
+        secondsTextField.isEnabled =  true
     }
     
     @objc func startCountingDown(){
@@ -81,11 +102,14 @@ class MainViewController: UIViewController {
             
         }else{
             timer.invalidate()
-            
-            minutesTextField.text = (minutes == 0 ? "00" : String(describing: minutes))
+            timerIsInProgress = false
+            startBtn.setTitle("Start", for: .normal)
+            messageLabel.isHidden =  false
+            messageLabel.entryAnimation(withDuration: 0.6, delay: 0, yShift: 30)
+            minutesTextField.text = (minutes == 0 ? "00" : String(describing: minutes!))
             minutesTextField.isEnabled =  true
             
-            secondsTextField.text = (seconds == 0 ? "00" : String(describing: seconds))
+            secondsTextField.text = (seconds == 0 ? "00" : String(describing: seconds!))
             secondsTextField.isEnabled = true
         }
     }
