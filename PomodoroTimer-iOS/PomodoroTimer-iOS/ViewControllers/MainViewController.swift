@@ -34,6 +34,8 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
         timerMainView.entryAnimation(withDuration: 0.6, delay: 0, yShift: 30)
         startBtn.entryAnimation(withDuration: 0.6, delay: 0, yShift: 30)
+        minutesTextField.delegate =  self
+        secondsTextField.delegate =  self
         // Do any additional setup after loading the view.
     }
     
@@ -89,5 +91,39 @@ class MainViewController: UIViewController {
     }
     
 
+    
+}
+
+
+extension MainViewController:UITextFieldDelegate{
+    
+    @IBAction func minutestTextFieldTextChanged(_ sender: Any) {
+        minutesTextField.text = handleTextFieldRestrictions(textField: minutesTextField.text)
+    }
+    
+    
+    @IBAction func secondsTextFieldTextChanged(_ sender: Any) {
+        
+        secondsTextField.text = handleTextFieldRestrictions(textField: secondsTextField.text)
+    }
+
+    
+    func handleTextFieldRestrictions(textField:String?) -> String{
+        let numberString = textField ?? "00"
+        if(numberString.count > 2){
+            let lastDigit = numberString.last
+            let middleDigit = numberString[1]
+            return "\(middleDigit)\(lastDigit!)"
+            
+        }else if(numberString.count == 1){
+            return "0\(numberString)"
+            
+        }else if(numberString.count == 0){
+            return "00"
+        }
+        
+        return numberString
+    }
+    
 }
 

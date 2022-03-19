@@ -47,29 +47,41 @@
                                         <rect key="frame" x="0.0" y="0.0" width="352" height="351.5"/>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="z2D-iz-bgb" userLabel="Timer">
-                                        <rect key="frame" x="78.5" y="182" width="195" height="57.5"/>
+                                        <rect key="frame" x="77" y="182" width="198" height="57.5"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="25" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="w0N-F8-G7e" userLabel="minutes">
-                                                <rect key="frame" x="0.0" y="0.0" width="77" height="57.5"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="25" borderStyle="roundedRect" textAlignment="center" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" minimumFontSize="40" translatesAutoresizingMaskIntoConstraints="NO" id="w0N-F8-G7e" userLabel="minutes">
+                                                <rect key="frame" x="0.0" y="0.0" width="80" height="57.5"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="80" id="qS2-6j-dh6"/>
+                                                </constraints>
                                                 <color key="textColor" systemColor="systemBackgroundColor"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="40"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" textContentType="date-time"/>
+                                                <connections>
+                                                    <action selector="minutestTextFieldTextChanged:" destination="Xly-I8-Kzu" eventType="editingChanged" id="61a-me-8xO"/>
+                                                </connections>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text=":" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6PA-4F-qWG" userLabel=":">
-                                                <rect key="frame" x="77" y="0.0" width="38" height="57.5"/>
+                                                <rect key="frame" x="80" y="0.0" width="38" height="57.5"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="textColor" systemColor="systemBackgroundColor"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="40"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="00" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KT4-A8-XtF" userLabel="seconds">
-                                                <rect key="frame" x="115" y="0.0" width="80" height="57.5"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="00" borderStyle="roundedRect" textAlignment="center" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" minimumFontSize="40" translatesAutoresizingMaskIntoConstraints="NO" id="KT4-A8-XtF" userLabel="seconds">
+                                                <rect key="frame" x="118" y="0.0" width="80" height="57.5"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="80" id="68C-3V-qaG"/>
+                                                </constraints>
                                                 <color key="textColor" systemColor="systemBackgroundColor"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="40"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                <connections>
+                                                    <action selector="secondsTextFieldTextChanged:" destination="Xly-I8-Kzu" eventType="editingChanged" id="8ci-Zs-zE7"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                     </stackView>
