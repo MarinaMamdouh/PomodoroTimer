@@ -94,6 +94,9 @@
                                     <color key="baseForegroundColor" systemColor="systemRedColor"/>
                                     <color key="baseBackgroundColor" systemColor="systemRedColor"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="startBtnClicked:" destination="Xly-I8-Kzu" eventType="touchUpInside" id="n67-gD-NOb"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="CRp-vd-Zs1"/>
@@ -108,6 +111,12 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="YNu-JJ-IXM"/>
+                    <connections>
+                        <outlet property="minutesTextField" destination="w0N-F8-G7e" id="ZQ7-qy-LJ8"/>
+                        <outlet property="secondsTextField" destination="KT4-A8-XtF" id="kcs-Wn-KtR"/>
+                        <outlet property="startBtn" destination="xwY-Lo-Ov1" id="bfJ-ig-2OG"/>
+                        <outlet property="timeStackView" destination="z2D-iz-bgb" id="FqJ-va-Clh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zj2-aP-QLx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
